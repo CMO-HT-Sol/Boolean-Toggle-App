@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Boolean Toggle App</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+  }
+  #message {
+    font-size: 18px;
+    margin: 20px;
+    display: none;
+    color: rgb(65, 65, 180);
+    
+  }
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: rgb(0, 114, 129);
+    color: white;
+  border: none;
+  margin-top: 100px;
+  box-shadow: 1px 2px 3px 4px cornflowerblue;
+  }
+</style>
+<body>
+  <button onclick="toggleMessage()">Click Here to see hidden message By Faraz sohail</button>
+  <p id="message">By Faraz sohail Full stack Web developer</p>
+
+<script>
+  var showMessage = false;
+
+function toggleMessage() {
+  showMessage = !showMessage;
+  updateMessageVisibility();
+}
+function updateMessageVisibility() {
+  var messageElement = document.getElementById("message");
+  if (showMessage) {
+    messageElement.style.display = "block";
+  } else {
+    messageElement.style.display = "none";
+  }
+}
+</script>
+</body>
+</html>
